@@ -1,0 +1,9 @@
+/* overwrites base style for the english version */
+.btn-primary.carpooling {
+    background:url('../img/scaricaWidget_eng.jpg') no-repeat scroll left top transparent;
+	height:88px;
+	width:0;
+	padding:0 126px;
+	border:0;
+	margin-top:10px;
+}

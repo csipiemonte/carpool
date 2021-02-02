@@ -1,0 +1,10 @@
+{
+    "name": "impronta48/carpoolinghub",
+    "require": {
+        "cakephp/cakephp": "2.10.*",
+        "cakephp/debug_kit": "^2.2.0"
+    },
+    "config": {
+        "vendor-dir": "Vendor/"
+    }
+}

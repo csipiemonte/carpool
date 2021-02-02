@@ -1,0 +1,304 @@
+@import url(/assets/global/css/skin.css);
+
+/*******************************/
+
+/* header servizio */
+.container-fluid {padding-left:15px;padding-right: 15px;} /*change value header.html*/
+div.header {border:1px solid #D3D3D3;}
+div#header-servizio { background: #0153A9; padding: 10px 40px 10px 80px;color: #fff;}
+div#header-servizio h2 { font-size: 32px;}
+
+.menupaprivati{ width:100%; display:inline-block;}
+.menupaprivati ul.pull-right li a {height:auto;}
+.menupaprivati ul.pull-right{ margin-bottom:-5px;}/*menu SP - risolve problema ie6 */
+.menupaprivati ul.pull-right li.active {padding:0;margin:0;}
+
+#btn-progetto {
+	margin-top:10px;
+}
+.btn-primary.carpooling {
+    background:url('../img/scaricaWidget.jpg') no-repeat scroll left top transparent;
+	height:88px;
+	width:0;
+	padding:0 126px;
+	border:0;
+	margin-top:10px;
+}
+.btn-primary.carpooling:hover {
+	opacity:.8;
+}
+.row.tit_ric {
+    margin-top: 10px;
+}
+#search-filters {
+    background:#e6e6e6!important;
+	padding:15px 15px 50px 15px!important;
+	margin-top:20px;
+}
+#search-filters h5{
+	text-transform:uppercase;
+}
+.datepicker {
+	/*width:50%;*/
+}
+  .ui-datepicker{
+  z-index:10;
+  }
+.glyphicon-calendar{
+	right:5%;
+	color:#999;
+}
+.ordinamento{
+	text-align:right;
+}
+.inverti a{
+	background:url('../img/new/vaievieni.png') no-repeat scroll 50% 50% transparent;
+	width:0;
+	height:40px;
+	padding:0 20px;
+	display:block;
+	margin:auto;
+}
+.obbligatorio{
+	position:absolute;
+	top:35px;
+}
+.viaggio {
+    background-color: #d9d9d9;
+    margin-bottom: 12px;
+    margin-left: 0;
+    margin-right: 0;
+	padding:10px 0;
+}
+.viaggio2 {
+    background-color: #e9e9e9;
+}
+.viaggio .provider{
+	padding:10px 15px;
+}
+.viaggio .provider img {
+    max-height: 40px !important;
+    max-width: 80px !important;
+}
+.viaggio p.data_viaggio{
+	font-size:1.2em;
+	font-weight:bold;
+	margin:10px 0 0 0;
+	line-height:1.2em;
+}
+.viaggio p.ora_viaggio{
+	font-size:1.2em;
+	font-weight:bold;
+	margin:0;
+	line-height:1.2em;
+}
+.viaggio p.pap_viaggio{
+	margin:10px 0 0 0;
+}
+.viaggio p.scheda_viaggio{
+	margin:7px 0 0 0;
+}
+.viaggio .ricorrente .si{
+	background:url('../img/new/ICO_ok_mini.png') no-repeat scroll right top transparent;
+	text-indent:-10000px;
+	width:0;
+	height:28px;
+	padding:0 14px;
+	display:block;
+}
+.viaggio .ricorrente .no{
+	background:url('../img/new/ICO_no_mini.png') no-repeat scroll right top transparent;
+	text-indent:-10000px;
+	width:0;
+	height:28px;
+	padding:0 14px;
+	display:block;
+}
+.viaggio .ritorno .si{
+	background:url('../img/new/ICO_ok_mini.png') no-repeat scroll right top transparent;
+	text-indent:-10000px;
+	width:0;
+	height:28px;
+	padding:0 14px;
+	display:block;
+}
+.viaggio .ritorno .no{
+	background:url('../img/new/ICO_no_mini.png') no-repeat scroll right top transparent;
+	text-indent:-10000px;
+	width:0;
+	height:28px;
+	padding:0 14px;
+	display:block;
+}
+.viaggio .dettagli{
+	padding-right:12px!important;
+	padding-left:12px!important;
+}
+.viaggio .prezzo{
+	color:#E5181D;
+	font-size:1.3em;
+	font-weight:bold;
+	margin-top:8px;
+}
+.viaggio .pap{
+	font-weight:bold;
+	text-transform:uppercase;
+	display:block;
+	line-height:1.3em;
+}
+.viaggio .scheda{
+	font-weight:bold;
+	padding:3px 0;
+	/*background:url('../img/new/freccette.png') no-repeat scroll right 50% transparent;*/
+}
+.icon-chevron-right {font-size:.85em;}
+/* footer */
+.footer {padding-right: 80px;padding-left: 80px;}
+.footer {background:#1E354D; color:#ffffff;}
+.footer hr{display:none;}
+.footerCsi { padding:40px 0px;overflow:hidden;width:auto}
+.footerCsi a{color:#ffffff;}
+
+/*******************************/
+
+/*regole x widget*/
+  body.embedded .tit_ric h3 {
+	font-size:14px;
+  }
+  body.embedded .pulsantiera {
+	display:none;
+  }
+  body.embedded #portalHeader {
+	display:none;
+  }
+  body.embedded div#header-servizio {
+    background:url('../img/new/testata_widget.jpg') repeat-x scroll 0 0 transparent;
+    color: #fff;
+    padding: 0;
+	height:160px;
+	width:100%;
+  }
+  body.embedded div#header-servizio h2{
+    background:url('../img/new/macchina_widget.png') no-repeat scroll 50% 10px transparent;
+	text-indent:-10000px;
+	margin:0;
+	height:128px;
+  }
+  body.embedded .spaziatore {
+	margin-bottom:20px;
+  }
+  body.embedded h3.cerca_passaggi {
+	/*display:none;*/
+  }
+  body.embedded .inverti a{
+	/*background:url('../img/new/vaievieni_vert.png') no-repeat scroll 50% 50% transparent;*/
+}
+  body.embedded .inverti br{
+	display:none;
+}
+
+  body.embedded .viaggio{
+	padding-top:0!important;
+}
+  body.embedded .viaggio .provider{
+    border-bottom: 3px solid #fff;
+}
+  body.embedded .ordinamento{
+	text-align:left;
+} 
+  body.embedded .viaggio p.data_viaggio,   body.embedded .viaggio p.ora_viaggio{
+	font-size:1.2em;
+	font-weight:bold;
+	margin:10px 0 0 0;
+}
+ body.embedded .viaggio .prezzo{
+	font-size:2.2em;
+	margin-top:0;
+}
+ body.embedded .viaggio .pap{
+	display:inline-block;
+}
+ body.embedded .viaggio .ricorrente {
+	text-align:right;
+}
+ body.embedded .viaggio .ritorno {
+	text-align:right;
+}
+ body.embedded .viaggio .ricorrente .si{
+	display:inline-block;
+	color:transparent;
+}
+ body.embedded .viaggio .ricorrente .no{
+	display:inline-block;
+	color:transparent;
+}
+ body.embedded .viaggio .ritorno .si{
+	display:inline-block;
+	color:transparent;
+}
+ body.embedded .viaggio .ritorno .no{
+	display:inline-block;
+	color:transparent;
+}
+ body.embedded .viaggio p.scheda_viaggio {
+    margin: 25px 0 0;
+}
+ body.embedded footer.footer {
+    background:url('../img/new/footer_widget.jpg') repeat-x scroll 0 0 transparent;
+    color: #fff;
+    padding: 0;
+	height:71px;
+	width:100%;
+  }
+ /* body.embedded footer.footer div.container-fluid{
+	display:none;
+  }*/
+  body.embedded .footerCsi {
+    padding: 0;
+	margin-top:20px;
+	/*display:table;*/
+  }
+  body.embedded .footerCsi .compendio{
+  width:310px;
+  margin:auto;
+  }
+  body.embedded footer.footer div.opticities, body.embedded footer.footer div.csi_piemonte, body.embedded footer.footer div.il_progetto,  body.embedded footer.footer div.privacy{
+	/*float:left;*/
+	display:table-cell;
+	vertical-align:middle;
+	/*height:29px;*/
+  }
+  body.embedded footer.footer div.opticities,  body.embedded footer.footer div.csi_piemonte, body.embedded footer.footer div.il_progetto {
+	border-right:1px solid #a6a6d8;
+  }
+   body.embedded footer.footer div.dati_footer{
+	display:none;
+  }
+  body.embedded footer.footer .privacy span{
+	display:none;
+}
+  body.embedded footer.footer .col-sm-2{
+	padding:0 6px;
+	/*width:24%!important;
+	text-align:center;*/
+}
+@media (min-width: 992px) {
+.viaggio .ricorrente{
+	padding-left:50px!important;
+}
+}
+@media (max-width: 350px) {
+body.embedded footer.footer .opticities img {
+    width: 55px;
+}
+body.embedded footer.footer .csi_piemonte img {
+    width: 35px; 
+}
+}
+
+/* hack per IE9 */
+body.embedded .container { width:400px\9;}
+body.embedded .provider, body.embedded .partenza_viaggio, body.embedded .arrivo_viaggio, body.embedded .posti_viaggio, body.embedded .schedatravel { width:100%\9;}
+body.embedded .travel { width:50%\9;}
+body.embedded .prezzo_viaggio { width:50%\9;}
+/*body.embedded .form-control { width:auto\9\0;}*/

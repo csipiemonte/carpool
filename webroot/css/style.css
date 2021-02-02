@@ -1,0 +1,67 @@
+.opticities .input-block {
+	/*width: 95%;*/
+}
+
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+    z-index: 2;
+    color: #FFF;
+    cursor: default;
+    background-color: #337AB7;
+    border-color: #337AB7;
+}
+
+#language-switcher {
+	padding: 10px 0;
+}
+
+#language-switcher li, #language-switcher a {
+	display: inline;
+	text-decoration: none;
+	margin-right: 10px;
+	border: 0;
+}
+
+#language-switcher img {
+	opacity: 0.4;
+}
+
+#language-switcher li.selected img {
+	opacity: 1.0;
+}
+
+.pagination .active {
+	position: relative;
+	float: left;
+	padding: 6px 12px;
+	margin-left: -1px;
+	line-height: 1.42857;
+	text-decoration: none;
+	background-color: #FFF;
+	border: 1px solid #DDD;
+	display: inline-block;
+	border-radius: 15px;
+}
+
+#outwardMindate,
+#outwardMaxdate,
+#outwardMindate-icon, 
+#outwardMaxdate-icon {
+	cursor: pointer;
+}
+
+#switch-end-points-cont {
+	text-align: center;
+}
+
+.provider-icon {
+	max-width: 100px;
+	max-height: 40px;
+}
+
+#switch-end-points {
+	margin-top: 20px;
+}
+
+#btn-search {
+	margin-top: 25px;
+}

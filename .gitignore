@@ -1,0 +1,17 @@
+webroot/img/
+webroot/files/
+tmp/*
+Config/core.php
+Vendor/*
+
+=======
+# Created by https://www.gitignore.io
+
+
+/vendor/*
+/config/app.php
+/logs/*
+
+CakePHP 2
+
+/nbproject/private/
