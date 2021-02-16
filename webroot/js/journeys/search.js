@@ -5,7 +5,7 @@ function searchProviders(providers, q, searchProviderBaseUrl, searchResultBaseUr
     let providersData = [];
     for (i = 0; i < providers.length; i++) {
         let currProvider = providers[i];
-        if (currProvider['id'] === 3) continue;
+        //if (currProvider['id'] === 3) continue;
         $.ajax({
             url: searchProviderBaseUrl + '/' + currProvider['id'] + '.json?' + q,
             dataType: 'json'
