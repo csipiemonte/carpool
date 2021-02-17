@@ -5,6 +5,7 @@ namespace App\Controller;
 
 use App\Controller\Component\GeocoderComponent;
 use App\Model\Entity\SearchRequest;
+use App\Model\Entity\WidgetTracking;
 use App\Model\Table\SearchRequestsTable;
 use App\Form\SearchForm;
 use Cake\Datasource\ResultSetInterface;
@@ -38,6 +39,7 @@ class JourneysController extends AppController
         $this->loadComponent('Geocoder');
         $this->SearchResults = TableRegistry::getTableLocator()->get('SearchResults');
         $this->Providers = TableRegistry::getTableLocator()->get('Providers');
+        $this->WidgetTracking = TableRegistry::getTableLocator()->get('WidgetTrackings');
     }
 
     /**
@@ -68,16 +70,17 @@ class JourneysController extends AppController
                 ->first();
 
             if (empty($trackingRecord)) {
-                $data = [
+                $trackingRecord = new WidgetTracking([
                     'url' => $url,
                     'hits_num' => 1
-                ];
+                ]);
+
             } else {
                 $data = [
                     'hits_num' => $trackingRecord->hits_num += 1
                 ];
+                $this->WidgetTracking->patchEntity($trackingRecord, $data);
             }
-            $this->WidgetTracking->patchEntity($trackingRecord, $data);
             $this->WidgetTracking->save($trackingRecord);
         }
         // END of tracciatura widget
