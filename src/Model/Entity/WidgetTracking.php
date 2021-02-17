@@ -24,7 +24,6 @@ class WidgetTracking extends Entity
      * @var array
      */
     protected $_accessible = [
-        'id' => true,
         'url' => true,
         'hits_num' => true,
     ];

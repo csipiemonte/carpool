@@ -38,6 +38,8 @@ class WidgetTrackingsTable extends Table
         parent::initialize($config);
 
         $this->setTable('widget_trackings');
+        $this->setDisplayField('id');
+        $this->setPrimaryKey('id');
     }
 
     /**
@@ -50,8 +52,7 @@ class WidgetTrackingsTable extends Table
     {
         $validator
             ->integer('id')
-            ->requirePresence('id', 'create')
-            ->notEmptyString('id');
+            ->allowEmptyString('id', null, 'create');
 
         $validator
             ->scalar('url')
