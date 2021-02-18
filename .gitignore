@@ -1,49 +1,17 @@
-# CakePHP specific files #
-##########################
-/config/app_local.php
-/config/.env
-/logs/*
-/tmp/*
+webroot/img/
+webroot/files/
+tmp/*
+Config/core.php
+Vendor/*
+
+=======
+# Created by https://www.gitignore.io
+
+
 /vendor/*
+/config/app.php
+/logs/*
 
-# OS generated files #
-######################
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-Icon?
-ehthumbs.db
-Thumbs.db
-.directory
+CakePHP 2
 
-# Tool specific files #
-#######################
-# PHPUnit
-.phpunit.result.cache
-# vim
-*~
-*.swp
-*.swo
-# sublime text & textmate
-*.sublime-*
-*.stTheme.cache
-*.tmlanguage.cache
-*.tmPreferences.cache
-# Eclipse
-.settings/*
-# JetBrains, aka PHPStorm, IntelliJ IDEA
-.idea/*
-# NetBeans
-nbproject/*
-# Visual Studio Code
-.vscode
-# Sass preprocessor
-.sass-cache/
-# PhpStorm
-.idea
-#other
-.github
-config/.env
-config/.env.example
+/nbproject/private/
