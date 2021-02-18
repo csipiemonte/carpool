@@ -172,7 +172,6 @@ class JourneysController extends AppController
                 'to[fulladdress]' => $search_criteria['to']['fulladdress'],
                 'seats[number]' => $search_criteria['seats']['number']
             ]);
-            //$this->request->data = $search_criteria;
         }
         $this->set('searchForm', $searchForm);
         $this->set('layout', $this->layout);
