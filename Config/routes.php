@@ -1,59 +1,117 @@
 <?php
 /**
- * Routes configuration
+ * Routes configuration.
  *
  * In this file, you set up routes to your controllers and their actions.
  * Routes are very important mechanism that allows you to freely connect
  * different URLs to chosen controllers and their actions (functions).
  *
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * It's loaded within the context of `Application::routes()` method which
+ * receives a `RouteBuilder` instance `$routes` as method argument.
+ *
+ * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @package       app.Config
- * @since         CakePHP(tm) v 0.2.9
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ * @link          https://cakephp.org CakePHP(tm) Project
+ * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
- 
- App::uses('I18nRoute', 'I18n.Routing/Route');
-Router::connect('/',
-    array('controller' => 'journeys', 'action' => 'search'),
-    array('routeClass' => 'I18nRoute')
-);
-Router::connect('/pages/*',
-    array('controller' => 'pages', 'action' => 'display'),
-    array('routeClass' => 'I18nRoute')
-);
- 
-/**
- * Here, we are connecting '/' (base path) to controller called 'Pages',
- * its action called 'display', and we pass a param to select the view file
- * to use (in this case, /app/View/Pages/home.ctp)...
- */
-	Router::connect('/', array('controller' => 'journeys', 'action' => 'search'));
-/**
- * ...and connect the rest of 'Pages' controller's URLs.
- */
-	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
 
-/**
- * Load all plugin routes. See the CakePlugin documentation on
- * how to customize the loading of plugin routes.
- */
-	CakePlugin::routes();
+use Cake\Routing\Route\DashedRoute;
+use Cake\Routing\RouteBuilder;
 
-/**
- * Load the CakePHP default routes. Only remove this if you do not want to use
- * the built-in default routes.
+/*
+ * The default class to use for all routes
+ *
+ * The following route classes are supplied with CakePHP and are appropriate
+ * to set as the default:
+ *
+ * - Route
+ * - InflectedRoute
+ * - DashedRoute
+ *
+ * If no call is made to `Router::defaultRouteClass()`, the class used is
+ * `Route` (`Cake\Routing\Route\Route`)
+ *
+ * Note that `Route` does not do any inflections on URLs which will result in
+ * inconsistently cased URLs when used with `:plugin`, `:controller` and
+ * `:action` markers.
  */
-	//require CAKE . 'Config' . DS . 'routes.php';
-	
-/**
- * Add support for Json and Xml
+/** @var RouteBuilder $routes */
+$routes->setRouteClass(DashedRoute::class);
+$routes->scope('/', function (RouteBuilder $builder) {
+    $builder->setExtensions(['json', 'xml']);
+    /**
+     * this fake route is necessary to prevent Cakephp from complaint about missing route for '/'
+     * It will never be called cause Middleware will intercept and redirect the request
+     */
+    $builder->connect('/', ['controller' => 'Fake']);
+    $builder->redirect(
+        '/',
+        ['controller' => 'Pages', 'action' => 'execRedirect'],
+        ['routeClass' => 'ADmad/I18n.I18nRoute']
+    // Or ['persist'=>['id']] for default routing where the
+    // view action expects $id as an argument.
+    );
+    /**
+     * once middleware will intercept route for '/' the following i18n route will be used!
+     */
+
+    /*$builder->connect(
+        '/',
+        ['controller' => 'journeys', 'action' => 'search'],
+        ['routeClass' => 'ADmad/I18n.I18nRoute']
+    );
+
+    $builder->connect(
+        '/journeys/search',
+        ['controller' => 'journeys', 'action' => 'search'],
+        ['routeClass' => 'ADmad/I18n.I18nRoute']
+    );
+
+    $builder->connect(
+        '/:controller/:action',
+        [],
+        ['routeClass' => 'ADmad/I18n.I18nRoute']
+    );*/
+
+    /*
+     * ...and connect the rest of 'Pages' controller's URLs.
+     */
+    //$builder->connect('/pages/*', 'Pages::display');
+
+    /*
+     * Connect catchall routes for all controllers.
+     *
+     * The `fallbacks` method is a shortcut for
+     *
+     * ```
+     * $builder->connect('/:controller', ['action' => 'index']);
+     * $builder->connect('/:controller/:action/*', []);
+     * ```
+     *
+     * You can remove these routes once you've connected the
+     * routes you want in your application.
+     */
+    $builder->fallbacks('ADmad/I18n.I18nRoute');
+});
+
+/*
+ * If you need a different set of middleware or none at all,
+ * open new scope and define routes there.
+ *
+ * ```
+ * $routes->scope('/api', function (RouteBuilder $builder) {
+ *     // No $builder->applyMiddleware() here.
+ *
+ *     // Parse specified extensions from URLs
+ *     // $builder->setExtensions(['json', 'xml']);
+ *
+ *     // Connect API actions here.
+ * });
+ * ```
  */
-	 Router::parseExtensions('json', 'xml'); 
