@@ -912,6 +912,10 @@ class JourneysController extends AppController
                     $rdexJourney['uuid'] = !empty($queryAr['id']) ? $queryAr['id'] : "";
                     // let's assume origin is equal to link of API v3
                     $rdexJourney['origin'] = $fldValue[0];
+                    $search_criteria = $this->request->getSession()->read('search_criteria');
+                    if(!empty($search_criteria['seats'])){
+                        $rdexJourney['url'] .= "&requested_seats=" . $search_criteria['seats']['number'];
+                    }
                 }
             }
 
@@ -1136,7 +1140,7 @@ class JourneysController extends AppController
         $r['type'] = $j['type'];
         $r['real_time'] = $j['real_time'];
         $r['stopped'] = $j['stopped'];
-        $r['stopped'] = $j['stopped'];
+        //$r['stopped'] = $j['stopped'];
         $r['mon'] = $j['days']['monday'];
         $r['tue'] = $j['days']['tuesday'];
         $r['wed'] = $j['days']['wednesday'];

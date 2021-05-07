@@ -397,18 +397,8 @@ class SearchResultsTable extends Table
         $lng_from = $option['from']['longitude'];
         $lat_to = $option['to']['latitude'];
         $lng_to = $option['to']['longitude'];
-        $distanceFrom = '(3959 * ACOS(COS(RADIANS(' . $lat_from . '))
-									* COS(RADIANS(SearchResults.from_latitude))
-									* COS(RADIANS(SearchResults.from_longitude)
-									- RADIANS(' . $lng_from . '))
-									+ SIN(RADIANS(' . $lat_from . '))
-									* SIN(RADIANS(SearchResults.from_latitude))))';
-        $distanceTo = '(3959*ACOS(COS(RADIANS(' . $lat_to . '))
-									* COS(RADIANS(SearchResults.to_latitude))
-									* COS(RADIANS(SearchResults.to_longitude)
-									- RADIANS(' . $lng_to . '))
-									+ SIN(RADIANS(' . $lat_to . '))
-									* SIN(RADIANS(SearchResults.to_latitude))))';
+        $distanceFrom = '(3959 * ACOS(COS(RADIANS(' . $lat_from . ')) * COS(RADIANS(SearchResults.from_latitude)) * COS(RADIANS(SearchResults.from_longitude) - RADIANS(' . $lng_from . ')) + SIN(RADIANS(' . $lat_from . ')) * SIN(RADIANS(SearchResults.from_latitude))))';
+        $distanceTo = '(3959*ACOS(COS(RADIANS(' . $lat_to . ')) * COS(RADIANS(SearchResults.to_latitude)) * COS(RADIANS(SearchResults.to_longitude) - RADIANS(' . $lng_to . ')) + SIN(RADIANS(' . $lat_to . ')) * SIN(RADIANS(SearchResults.to_latitude))))';
 
         $query = $query
             ->select(['distance_from' => $distanceFrom, 'distance_to' => $distanceTo])
@@ -457,6 +447,8 @@ class SearchResultsTable extends Table
         $session_id = $option['session_id'];
         if ($ricalcolo && !empty($criteria['radius'])) {
             $query = $this->findForRadius($query, $criteria);
+        }
+        if($ricalcolo && !empty($criteria['outward'])){
             $query = $this->findForTime($query, $criteria);
         }
         $query = $query

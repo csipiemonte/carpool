@@ -78,6 +78,7 @@ if(!empty($res->count() > 0)):?>
 		echo $this->Form->input('to.fulladdress', array('type' => 'hidden', 'value' => $criteria['to']['fulladdress']));
 		echo $this->Form->input('outward.mindate', array('type' => 'hidden', 'value' => $criteria['outward']['mindate']));
 		echo $this->Form->input('outward.maxdate', array('type' => 'hidden', 'value' => $criteria['outward']['maxdate']));
+        echo $this->Form->input('seats.number', array('type' => 'hidden', 'value' => $criteria['seats']['number']));
 	?>
 	<?php
 		$ricalcolo = $this->getRequest()->getSession()->read('ricalcolo');
@@ -88,8 +89,8 @@ if(!empty($res->count() > 0)):?>
 	<?php echo $this->Form->input('radius', array('type' => 'hidden', 'id' => 'radius', 'name' => 'radius', 'value' => $criteria['radius']));?>
 	<br>
 	<label><?php echo __("Fascia oraria");?>: <span id="curr-fascia-oraria"></span></label>
-	<?php echo $this->Form->input('outward.mintime', array('type' => 'hidden', 'value' => $criteria['outward']['mintime']));?>
-	<?php echo $this->Form->input('outward.maxtime', array('type' => 'hidden', 'value' => $criteria['outward']['maxtime']));?>
+	<?php echo $this->Form->input('outward.mintime', array('type' => 'hidden', 'id' => 'outwardMintime' ,'value' => $criteria['outward']['mintime']));?>
+	<?php echo $this->Form->input('outward.maxtime', array('type' => 'hidden', 'id' => 'outwardMaxtime', 'value' => $criteria['outward']['maxtime']));?>
 	<div id="fascia-oraria-slider"></div>
 	<br>
 	<?php echo $this->Form->input('ricalcolo', array('type' => 'hidden', 'value' => 1));?>
@@ -227,7 +228,7 @@ if(!empty($res->count() > 0)):?>
 
 			<div class="col-xs-6 col-md-6 col-lg-1">
 				<?php
-					$j_prezzo = floatval($j['cost_fixed'])+floatval($j['cost_variable']);
+					$j_prezzo = (float)$j['cost_fixed'] + (float)$j['cost_variable'];
 				?>
 				<?php if($j_prezzo > 0):?>
 				<span class="prezzo pull-right">
