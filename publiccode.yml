@@ -28,7 +28,20 @@ description:
        - Aggregates BlaBlaCar
        - RDEX Standard
        - Open to new integrations
+  it: 
+    localisedName: CarPoolingHub   # Optional
+    genericName: Car Pooling Aggregator
+    shortDescription: >
+          Aggregates several car pooling providers and presents the results in a aggregated manner
 
+    longDescription: >
+          Aggregates several car pooling providers and presents the results in a aggregated manner.
+
+    features:
+       - Aggregates BlaBlaCar
+       - RDEX Standard
+       - Open to new integrations
+       
 legal:
   license: EUPL-1.2
 
