@@ -580,8 +580,8 @@ msgid "Arrivo"
 msgstr "Arrival"
 
 #: View/Journeys/search_result.ctp:193
-msgid "Posti disponibili"
-msgstr "Available seats"
+msgid "Posti richiesti"
+msgstr "Requested seats"
 
 #: View/Journeys/search_result.ctp:208
 msgid "Ricorrente"

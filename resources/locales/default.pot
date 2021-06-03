@@ -402,7 +402,7 @@ msgid "Arrivo"
 msgstr ""
 
 #: Journeys/search_result.php:248
-msgid "Posti disponibili"
+msgid "Posti richiesti"
 msgstr ""
 
 #: Journeys/search_result.php:253

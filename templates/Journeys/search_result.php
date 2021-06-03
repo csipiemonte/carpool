@@ -246,7 +246,7 @@ if(!empty($res->count() > 0)):?>
 			</div>
 
 			<div class="col-xs-12 col-md-12 col-lg-2">
-				<p class="pap_viaggio"><span class="pap"><?php echo __("Posti disponibili");?></span> <?php echo $j['driver_seats'];?></p>
+				<p class="pap_viaggio"><span class="pap"><?php echo __("Posti richiesti");?></span> <?php echo $j['driver_seats'];?></p>
 			</div>
 
 			<div class="col-xs-12 col-md-12 col-lg-1 dettagli">
