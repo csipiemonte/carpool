@@ -1,58 +1,70 @@
-publiccodeYmlVersion: "0.2"
-
-name: CarPoolingHub
-url: "https://github.com/impronta48/opticities-aggregator"
-softwareVersion: "2.0.1"    # Optional
-releaseDate: "2021-06-03"
-platforms:
-  - web
-
+publiccodeYmlVersion: '0.2'
 categories:
   - fleet-management
-
-developmentStatus: stable
-
-softwareType: "standalone/web"
-
+dependsOn:
+  open:
+    - name: Apache httpd
+      optional: false
+      version: ''
+      versionMax: ''
+      versionMin: '2.2'
+    - name: PHP
+      optional: false
+      version: ''
+      versionMax: ''
+      versionMin: ''
 description:
   en:
-    localisedName: CarPoolingHub   # Optional
-    genericName: Car Pooling Aggregator
-    shortDescription: >
-          Aggregates several car pooling providers and presents the results in a aggregated manner
-
-    longDescription: >
-          Aggregates several car pooling providers and presents the results in a aggregated manner.
-
     features:
-       - Aggregates BlaBlaCar
-       - RDEX Standard
-       - Open to new integrations
-  it: 
-    localisedName: CarPoolingHub   # Optional
+      - Aggregates BlaBlaCar
+      - RDEX Standard
+      - Open to new integrations
     genericName: Car Pooling Aggregator
-    shortDescription: >
-          Aggregates several car pooling providers and presents the results in a aggregated manner
-
-    longDescription: >
-          Aggregates several car pooling providers and presents the results in a aggregated manner.
-
-    features:
-       - Aggregates BlaBlaCar
-       - RDEX Standard
-       - Open to new integrations
-       
+    localisedName: CarPoolingHub
+    longDescription: |
+      Aggregates several car pooling providers and presents the results in a
+      aggregated manner.Aggregates several car pooling providers and presents
+      the results in a aggregated manner.Aggregates several car pooling
+      providers and presents the results in a aggregated manner.Aggregates
+      several car pooling providers and presents the results in a aggregated
+      manner.Aggregates several car pooling providers and presents the results
+      in a aggregated manner.Aggregates several car pooling providers and
+      presents the results in a aggregated manner.
+    shortDescription: |-
+      Aggregates several car pooling providers and presents the results in a
+      aggregated manner
+developmentStatus: stable
+it:
+  conforme:
+    gdpr: false
+    lineeGuidaDesign: false
+    misureMinimeSicurezza: false
+    modelloInteroperabilita: false
+  countryExtensionVersion: '0.2'
+  piattaforme:
+    anpr: false
+    cie: false
+    pagopa: false
+    spid: false
+  riuso:
+    codiceIPA: csi_piem
 legal:
   license: EUPL-1.2
-
-maintenance:
-  type: "community"
-
-  contacts:
-    - name: Massimo INFUNTI
-
 localisation:
-  localisationReady: yes
   availableLanguages:
     - it
-  
+  localisationReady: false
+maintenance:
+  contacts:
+    - email: elisa.fiorio@csi.it
+      name: Elisa Fiorio
+    - email: massimoi@impronta48.it
+      name: Massimo Infunti
+  type: internal
+name: CarPoolingHub
+platforms:
+  - web
+releaseDate: '2021-06-03'
+softwareType: standalone/web
+softwareVersion: 2.0.1
+url: 'https://github.com/csipiemonte/carpool'  
