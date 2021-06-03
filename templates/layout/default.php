@@ -16,7 +16,7 @@
 
 use Cake\Core\Configure;
 
-$cakeDescription = __("Sistema Piemonte - Registrazione");
+$cakeDescription = __("Car Pooling HUB - Servizi Online CSI");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
@@ -59,29 +59,8 @@ $cakeDescription = __("Sistema Piemonte - Registrazione");
         <p><?php echo __("ATTENZIONE! Il browser in uso non supporta le applicazioni Javascript.<br />
 			Per usufruire in maniera completa di alcuni servizi presenti in RuparPiemonte,
 			potrebbe essere necessario l&acute;utilizzo dei Javascript.");?></p></noscript>
-
-    <!--<div class="row-fluid menupaprivati">
-				<ul class="nav menu pull-right">
-					<li class="parent">
-						<a href="http://www.sistemapiemonte.it/cms/pa"><?php echo __("Servizi per la PA");?></a>
-					</li>
-				</ul>
-				<ul class="nav menu pull-right">
-					<li class="active parent">
-						<a href="http://www.sistemapiemonte.it/cms/privati"><?php echo __("Servizi per privati");?></a>
-					</li>
-				</ul>
-				<ul class="nav menu menuTopSx pull-left">
-					<li>
-						<a href="http://www.sistemapiemonte.it/cms/privati/cos-e-sistemapiemonte" class="pipe_dx"><?php echo __("Cos'&#232; Sistemapiemonte");?></a>
-					</li>
-					<li>
-						<a href="http://www.sistemapiemonte.it/cms/privati/cerca-in-privati"><?php echo __("Cerca");?></a>
-					</li>
-				</ul>
-			</div>-->
     <div class="header">
-        <h1><?php echo __("Sistemapiemonte");?></h1>
+        
     </div>
 
 </div>
