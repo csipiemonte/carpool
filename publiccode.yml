@@ -1,0 +1,45 @@
+publiccodeYmlVersion: "0.2"
+
+name: CarPoolingHub
+url: "https://github.com/impronta48/opticities-aggregator"
+softwareVersion: "2.0.1"    # Optional
+releaseDate: "2021-06-03"
+platforms:
+  - web
+
+categories:
+  - fleet-management
+
+developmentStatus: stable
+
+softwareType: "standalone/web"
+
+description:
+  en:
+    localisedName: CarPoolingHub   # Optional
+    genericName: Car Pooling Aggregator
+    shortDescription: >
+          Aggregates several car pooling providers and presents the results in a aggregated manner
+
+    longDescription: >
+          Aggregates several car pooling providers and presents the results in a aggregated manner.
+
+    features:
+       - Aggregates BlaBlaCar
+       - RDEX Standard
+       - Open to new integrations
+
+legal:
+  license: EUPL-1.2
+
+maintenance:
+  type: "community"
+
+  contacts:
+    - name: Massimo INFUNTI
+
+localisation:
+  localisationReady: yes
+  availableLanguages:
+    - it
+  
