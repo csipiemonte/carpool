@@ -6,26 +6,24 @@
 <?php
 
 use Cake\Core\Configure;
+use Cake\Routing\Router;
 
 $l = Configure::read('Config.language');
 ?>
-<span id="curr-locale" style="display:none"><?php echo $l;?></span> <!--usato per js-->
-<!--<?php if($l == 'ita'):?>
+<span id="curr-locale" style="display:none"><?php echo $l;?></span>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&language=it"></script>
-<?php else:?>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&language=en"></script>
-<?php endif;?>-->
 
 <?php echo $this->Html->script('lonLat.autocomplete-1.1', array('inline' => false));?>
 
-
+<?php if ($layout = 'default'): ?>
 <div class="row">
     <div class="col-md-3 pulsantiera pull-right">
-        <a href="<?php echo __('scarica_widget_url');?>" class="btn btn-primary pull-right carpooling" id="btn-embed" title="<?php echo __("Copia il widget e inseriscilo nel tuo sito");?>">
+        <a href="<?= Router::url(['controller'=>'Pages','action'=>'display','widget']) ?>" class="btn btn-primary pull-right carpooling" id="btn-embed" title="<?php echo __("Copia il widget e inseriscilo nel tuo sito");?>">
             <span class="hidden"><?php echo __("Copia il widget e inseriscilo nel tuo sito");?></span>
         </a>
     </div>
 </div>
+<?php endif ?>
 
 <div class="row">
     <div class="col-md-12">

@@ -28,8 +28,7 @@ Il codice da inserire nella pagina è il seguente:<br>
 </pre>
 
 <iframe width="400" height="600" src="https://www.carpoolinghub.it/journeys/search?layout=embed"></iframe>
-
-
+    
 <hr>
 
 
