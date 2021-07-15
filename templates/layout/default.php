@@ -29,7 +29,7 @@ $cakeDescription = __("Carpooling hub - Servizi Online CSI");
     <meta name="author" content="CSI-Piemonte">
     <meta name="description" content="Sistema Piemonte il portale per cittadini ed imprese">
     <meta name="keywords" content="piemonte, servizi, cittadini, imprese, sistema, amministrazione">
-    <link href="<?php echo __("favicon_url"); ?>" rel="shortcut icon" type="image/vnd.microsoft.icon">
+    <?= $this->Html->meta('icon', 'favicon.png'); ?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>
         <?= $cakeDescription ?>
