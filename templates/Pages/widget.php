@@ -24,10 +24,10 @@ Modifica la pagina del tuo sito web nel punto in cui desideri inserire il widget
 Il codice da inserire nella pagina è il seguente:<br>
 
 <pre>
-&lt;iframe width="400" height="600" src="https://www.carpoolinghub.it/journeys/search?layout=embed"&gt;&lt;/iframe&gt;
+&lt;iframe width="400" height="600" src="//www.carpoolinghub.it/journeys/search?layout=embed"&gt;&lt;/iframe&gt;
 </pre>
 
-<iframe width="400" height="600" src="https://www.carpoolinghub.it/journeys/search?layout=embed"></iframe>
+<iframe width="400" height="600" src="//www.carpoolinghub.it/journeys/search?layout=embed"></iframe>
 
 <hr>
 
@@ -43,8 +43,8 @@ Se invece preferisci inserire un pulsante che mandi i tuoi visitatori a Car Pool
 </pre>
 
 
-<a href="https: //www.carpoolinghub.it/journeys/search">
-      <img alt="pulsante carpooling hub small" src="https: //www.carpoolinghub.it/img/carpool_small.png"  />
+<a href="//www.carpoolinghub.it/journeys/search">
+      <img alt="pulsante carpooling hub small" src=" //www.carpoolinghub.it/img/carpool_small.png"  />
 </a>
 
 <h3>Pulsante Grande</h3>
@@ -55,8 +55,8 @@ Se invece preferisci inserire un pulsante che mandi i tuoi visitatori a Car Pool
 gt;
 </pre>
 
-<a href="https: //www.carpoolinghub.it/journeys/search">
-      <img alt="pulsante carpooling hub medium" src="https: //www.carpoolinghub.it/img/carpool_big.png"  />
+<a href="//www.carpoolinghub.it/journeys/search">
+      <img alt="pulsante carpooling hub medium" src=" //www.carpoolinghub.it/img/carpool_big.png"  />
 </a>
 
 <h3>Logo</h3>
@@ -66,6 +66,7 @@ gt;
 &lt;/a&gt;
 </pre>
 
-<a href="https: //www.carpoolinghub.it/journeys/search">
-      <img alt="pulsante carpooling hub logo" src="https: //www.carpoolinghub.it/img/carpooling_logo.png"  />
+
+<a href="//www.carpoolinghub.it/journeys/search">
+      <img alt="pulsante carpooling hub logo" src=" //www.carpoolinghub.it/img/carpooling_logo.png"  />
 </a>

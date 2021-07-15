@@ -70,9 +70,4 @@ class PagesController extends AppController
             throw new NotFoundException();
         }
     }
-
-    public function execRedirect()
-    {
-        $this->redirect([ 'controller' => 'Journeys', 'action' => 'search']);
-    }
 }

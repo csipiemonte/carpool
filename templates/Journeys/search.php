@@ -15,7 +15,7 @@ $l = Configure::read('Config.language');
 
 <?php echo $this->Html->script('lonLat.autocomplete-1.1', array('inline' => false));?>
 
-<?php if ($layout = 'default'): ?>
+<?php if ($layout == 'default'): ?>
 <div class="row">
     <div class="col-md-3 pulsantiera pull-right">
         <a href="<?= Router::url(['controller'=>'Pages','action'=>'display','widget']) ?>" class="btn btn-primary pull-right carpooling" id="btn-embed" title="<?php echo __("Copia il widget e inseriscilo nel tuo sito");?>">
