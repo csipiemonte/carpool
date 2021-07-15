@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Routes configuration.
  *
@@ -41,48 +42,24 @@ use Cake\Routing\RouteBuilder;
  * inconsistently cased URLs when used with `:plugin`, `:controller` and
  * `:action` markers.
  */
-/** @var RouteBuilder $routes */
+
+/** @var \Cake\Routing\RouteBuilder $routes */
 $routes->setRouteClass(DashedRoute::class);
+
 $routes->scope('/', function (RouteBuilder $builder) {
-    $builder->setExtensions(['json', 'xml']);
-    /**
-     * this fake route is necessary to prevent Cakephp from complaint about missing route for '/'
-     * It will never be called cause Middleware will intercept and redirect the request
+    /*
+     * Here, we are connecting '/' (base path) to a controller called 'Pages',
+     * its action called 'display', and we pass a param to select the view file
+     * to use (in this case, templates/Pages/home.php)...
      */
-    $builder->connect('/', ['controller' => 'Fake']);
-    $builder->redirect(
-        '/',
-        ['controller' => 'Pages', 'action' => 'execRedirect'],
-        ['routeClass' => 'ADmad/I18n.I18nRoute']
-    // Or ['persist'=>['id']] for default routing where the
-    // view action expects $id as an argument.
-    );
-    /**
-     * once middleware will intercept route for '/' the following i18n route will be used!
-     */
-
-    /*$builder->connect(
-        '/',
-        ['controller' => 'journeys', 'action' => 'search'],
-        ['routeClass' => 'ADmad/I18n.I18nRoute']
-    );
-
-    $builder->connect(
-        '/journeys/search',
-        ['controller' => 'journeys', 'action' => 'search'],
-        ['routeClass' => 'ADmad/I18n.I18nRoute']
-    );
-
-    $builder->connect(
-        '/:controller/:action',
-        [],
-        ['routeClass' => 'ADmad/I18n.I18nRoute']
-    );*/
+    $builder->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
+    $builder->connect('/partecipa', ['controller' => 'Reservations', 'action' => 'add']);
+    $builder->setExtensions(['json', 'xls', 'csv']);
 
     /*
      * ...and connect the rest of 'Pages' controller's URLs.
      */
-    //$builder->connect('/pages/*', 'Pages::display');
+    $builder->connect('/pages/*', 'Pages::display');
 
     /*
      * Connect catchall routes for all controllers.
@@ -97,7 +74,7 @@ $routes->scope('/', function (RouteBuilder $builder) {
      * You can remove these routes once you've connected the
      * routes you want in your application.
      */
-    $builder->fallbacks('ADmad/I18n.I18nRoute');
+    $builder->fallbacks();
 });
 
 /*
@@ -107,10 +84,10 @@ $routes->scope('/', function (RouteBuilder $builder) {
  * ```
  * $routes->scope('/api', function (RouteBuilder $builder) {
  *     // No $builder->applyMiddleware() here.
- *
+ *     
  *     // Parse specified extensions from URLs
  *     // $builder->setExtensions(['json', 'xml']);
- *
+ *     
  *     // Connect API actions here.
  * });
  * ```

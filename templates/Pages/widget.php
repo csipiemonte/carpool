@@ -16,7 +16,7 @@ Per informazioni o segnalazioni è possibile scrivere a <a href="mailto:assisten
 </ul>
 </p>
 
-
+<hr>
 
 <h2>Incorporare il Widget</h2>
 Modifica la pagina del tuo sito web nel punto in cui desideri inserire il widget.
@@ -24,10 +24,10 @@ Modifica la pagina del tuo sito web nel punto in cui desideri inserire il widget
 Il codice da inserire nella pagina è il seguente:<br>
 
 <pre>
-&lt;iframe width="400" height="600" src="https://www.carpoolinghub.it/ita/journeys/search/journeys/search?layout=embed"&gt;&lt;/iframe&gt;
+&lt;iframe width="400" height="600" src="https://www.carpoolinghub.it/journeys/search/journeys/search?layout=embed"&gt;&lt;/iframe&gt;
 </pre>
 
-<iframe width="400" height="600" src="https://www.carpoolinghub.it/ita/journeys/search/journeys/search?layout=embed"></iframe>
+<iframe width="400" height="600" src="https://www.carpoolinghub.it/journeys/search?layout=embed"></iframe>
 
 
 <hr>
@@ -42,6 +42,8 @@ Se invece preferisci inserire un pulsante che mandi i tuoi visitatori a Car Pool
 &nbsp;&nbsp;&lt;img&nbsp;alt=&quot;pulsante&nbsp;carpooling&nbsp;hub&nbsp;small&quot;&nbsp;src=&quot;https://www.carpoolinghub.it/img/carpool_small.png&quot;&nbsp; /&gt;
 &lt;/a&gt;
 </pre>
+
+
 <a href="https://www.carpoolinghub.it/journeys/search">
       <img alt="pulsante carpooling hub small" src="https://www.carpoolinghub.it/img/carpool_small.png"  />
 </a>
@@ -53,6 +55,7 @@ Se invece preferisci inserire un pulsante che mandi i tuoi visitatori a Car Pool
 &lt;/a&
 gt;
 </pre>
+
 <a href="https://www.carpoolinghub.it/journeys/search">
       <img alt="pulsante carpooling hub medium" src="https://www.carpoolinghub.it/img/carpool_big.png"  />
 </a>
@@ -67,4 +70,3 @@ gt;
 <a href="https://www.carpoolinghub.it/journeys/search">
       <img alt="pulsante carpooling hub logo" src="https://www.carpoolinghub.it/img/carpooling_logo.png"  />
 </a>
-

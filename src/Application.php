@@ -109,7 +109,7 @@ class Application extends BaseApplication
             ->add(new CsrfProtectionMiddleware([
                 'httponly' => true,
             ]))
-            ->add(new I18nMiddleware([
+            /* ->add(new I18nMiddleware([
                 // If `true` will attempt to get matching languges in "languages" list based
                 // on browser locale and redirect to that when going to site root.
                 'detectLanguage' => true,
@@ -122,7 +122,8 @@ class Application extends BaseApplication
                     'eng' => ['locale' => 'en_US'],
                     'ita' => ['locale' => 'it_ITA']
                 ],
-            ]));
+            ])) */
+            ;
 
         return $middlewareQueue;
     }
