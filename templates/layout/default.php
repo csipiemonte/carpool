@@ -89,34 +89,6 @@ $cakeDescription = __("Carpooling hub - Servizi Online CSI");
 
     <!--RIMOSSO  Fixed navbar -->
     <div class="container" id="content">
-        <!--style="margin-top:70px"-->
-
-        <!--<div class="row pulsantiera">
-            <div class="col-md-12">
-                <a href="http://dev-www.sistemapiemonte.it/cms/privati/territorio/servizi/781-car-pooling-hub/3135-scarica-widget" class="btn btn-primary pull-right carpooling" id="btn-embed" title="<?php echo __("Copia il widget e inseriscilo nel tuo sito"); ?>">
-                    <span class="hidden"><?php echo __("Copia il widget e inseriscilo nel tuo sito"); ?></span>
-                </a>
-
-                <div class="modal fade" id="embedCodeModal" tabindex="-1" role="dialog" aria-labelledby="embedCodeModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="myModalLabel"><?php echo __("Copia il widget e inseriscilo nel tuo sito"); ?></h4>
-                            </div>
-                            <div class="modal-body">
-                                <div id="iframe-code-container">
-                                    <textarea style="width:100%" class="code-container"><iframe height="600" width="400" src="<?php echo $this->Url->build(array('controller' => 'journeys', 'action' => 'search?layout=embed'), array('fullBase' => true)); ?>"></iframe></textarea>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo __('Chiudi'); ?></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>-->
         <?= $this->Flash->render() ?>
         <?= $this->fetch('content') ?>
     </div>
@@ -150,15 +122,25 @@ $cakeDescription = __("Carpooling hub - Servizi Online CSI");
                         <a href="<?php echo __("ilprogetto_url"); ?>" target="_blank"><?php echo __("Il progetto"); ?></a>
                     </div>
                     <div class="span2 col-sm-2 il_progetto">
-                        <a href="<?= Router::url('/pages/widget')?>">Widget</a>
+                        <a href="<?= Router::url('/pages/widget') ?>">Widget</a>
                     </div>
                     <div class="span2 col-sm-2 privacy">
                         <a href="<?php echo __("cookies_policy_url"); ?>" target="_blank">Cookies <span>policy</span></a>
                     </div>
-                    <!-- <div class="span6 col-sm-6 dati_footer">
-                        Regione Piemonte - Partita Iva 02843860012 - Codice fiscale 80087670016 - <a href="http://www.sistemapiemonte.it/cms/privati/accessibilita" title="Accessibilit�">Accessibilit&agrave;</a></div> -->
+                    <div class="span2 col-sm-2 privacy">
+                        <a href="https://github.com/csipiemonte/carpool" target="_blank"><i class="icon-github"></i> GitHub</a>
+                    </div>
+
                 </div>
             </div>
+
+            <hr />
+            <div class="">
+                CSI Piemonte - CSI PIEMONTE
+                Consorzio per il Sistema Informativo
+                P.Iva 01995120019
+            </div>
+            <br>
         </div>
     </footer>
     <?= $this->fetch('scriptBottom') ?>

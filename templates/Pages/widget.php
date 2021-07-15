@@ -33,21 +33,19 @@ Il codice da inserire nella pagina è il seguente:<br>
 
 
 <h2>Pulsante con Link</h2>
-Se invece preferisci inserire un pulsante che mandi i tuoi visitatori a Car Pooling Hub, questo è il codice
+Se invece preferisci inserire un pulsante che mandi i tuoi visitatori a Car Pooling Hub, questo è il codice da copiare ed incollare nel tuo sito.
 
 <h3>Pulsante Piccolo</h3>
+<?= $this->Html->image('carpool_small.png'); ?>
 <pre>
 &lt;a&nbsp;href=&quot;https://www.carpoolinghub.it/journeys/search&quot;&gt;
 &nbsp;&nbsp;&lt;img&nbsp;alt=&quot;pulsante&nbsp;carpooling&nbsp;hub&nbsp;small&quot;&nbsp;src=&quot;https://www.carpoolinghub.it/img/carpool_small.png&quot;&nbsp; /&gt;
 &lt;/a&gt;
 </pre>
 
-
-<a href="//www.carpoolinghub.it/journeys/search">
-      <img alt="pulsante carpooling hub small" src=" //www.carpoolinghub.it/img/carpool_small.png"  />
-</a>
-
 <h3>Pulsante Grande</h3>
+<?= $this->Html->image('carpool_big.png'); ?>
+
 <pre>
 &lt;a&nbsp;href=&quot;https://www.carpoolinghub.it/journeys/search&quot;&gt;
 &nbsp;&nbsp;&lt;img&nbsp;alt=&quot;pulsante&nbsp;carpooling&nbsp;hub&nbsp;medium&quot;&nbsp;src=&quot;https://www.carpoolinghub.it/img/carpool_big.png&quot;&nbsp; /&gt;
@@ -55,18 +53,15 @@ Se invece preferisci inserire un pulsante che mandi i tuoi visitatori a Car Pool
 gt;
 </pre>
 
-<a href="//www.carpoolinghub.it/journeys/search">
+<a href=" //www.carpoolinghub.it/journeys/search">
       <img alt="pulsante carpooling hub medium" src=" //www.carpoolinghub.it/img/carpool_big.png"  />
 </a>
 
 <h3>Logo</h3>
+<?= $this->Html->image('carpooling_logo.png',['class'=>'image image-responsive']); ?>
+
 <pre>
 &lt;a&nbsp;href=&quot;https://www.carpoolinghub.it/journeys/search&quot;&gt;
 &nbsp;&nbsp;&lt;img&nbsp;alt=&quot;pulsante&nbsp;carpooling&nbsp;hub&nbsp;logo&quot;&nbsp;src=&quot;https://www.carpoolinghub.it/img/carpooling_logo.png&quot;&nbsp; /&gt;
 &lt;/a&gt;
 </pre>
-
-
-<a href="//www.carpoolinghub.it/journeys/search">
-      <img alt="pulsante carpooling hub logo" src=" //www.carpoolinghub.it/img/carpooling_logo.png"  />
-</a>
