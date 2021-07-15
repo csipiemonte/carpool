@@ -10,9 +10,14 @@ dependsOn:
       versionMin: '2.2'
     - name: PHP
       optional: false
-      version: ''
+      version: '7'
       versionMax: ''
-      versionMin: ''
+      versionMin: '7.1'
+    - name: CakePHP
+      optional: false
+      version: '4'
+      versionMax: ''
+      versionMin: '4.0'
 description:
   en:
     features:
@@ -23,22 +28,30 @@ description:
     localisedName: CarPoolingHub
     longDescription: |
       Aggregates several car pooling providers and presents the results in a
-      aggregated manner.Aggregates several car pooling providers and presents
-      the results in a aggregated manner.Aggregates several car pooling
-      providers and presents the results in a aggregated manner.Aggregates
-      several car pooling providers and presents the results in a aggregated
-      manner.Aggregates several car pooling providers and presents the results
-      in a aggregated manner.Aggregates several car pooling providers and
-      presents the results in a aggregated manner.
+      aggregated manner. New Car Pooling providers can register to car pooling hub so to present their result in the system.
+      Car Pooling Hub is particurlarly relevant when one user or organization wants to search several car pooling engines or 
+      does not want to tie to a single provider.
+      Car Pooling Hub is a sort of trivago for car pooling provider. The exhange format is RDEX (open standar for car pooling, but also BlaBlaCar API v3 is supported)
     shortDescription: |-
       Aggregates several car pooling providers and presents the results in a
       aggregated manner
+  it:
+    features:
+      -Aggrega BlaBlaCar
+      -Standard RDEX
+      -Aperto a nuove integrazioni
+    longDescription: |
+      Aggrega i risultati di vari motori di car pooling in un'unica piattaforma. Si tratta di una sorta di trivago del Car Pooling.
+      I fornitori di Car Pooling possono integrarsi nella piattaforma, in modo da presentare i loro risultati ai clienti.
+      Car pooling hub è utile per i privati che vogliono cercare velocemente su più piattaforma, ma anche per le organizzazioni che 
+      non vogliono o non possono scegliere una specifica piattaforma (es: enti pubblici).
+      Car Pooling Hub usa accetta lo standard aperto RDEX e la versione 3.0 delle API di BlaBlaCar.
 developmentStatus: stable
 it:
   conforme:
-    gdpr: false
+    gdpr: true
     lineeGuidaDesign: false
-    misureMinimeSicurezza: false
+    misureMinimeSicurezza: true
     modelloInteroperabilita: false
   countryExtensionVersion: '0.2'
   piattaforme:
@@ -58,13 +71,13 @@ maintenance:
   contacts:
     - email: elisa.fiorio@csi.it
       name: Elisa Fiorio
-    - email: massimoi@impronta48.it
+    - email: moma@impronta48.it
       name: Massimo Infunti
   type: internal
 name: CarPoolingHub
 platforms:
   - web
-releaseDate: '2021-06-03'
+releaseDate: '2021-07-15'
 softwareType: standalone/web
-softwareVersion: 2.0.1
+softwareVersion: 2.0.2
 url: 'https://github.com/csipiemonte/carpool'  

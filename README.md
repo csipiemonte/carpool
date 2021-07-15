@@ -24,7 +24,7 @@ Just repeat the installation procedure on the production server
 Remember to set debug=false in your configure/.env
 
 # Versioning
-2.0.1
+2.0.2
 
 # Authors
 Marina Dragoneri (Original Idea)
