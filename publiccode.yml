@@ -1,3 +1,7 @@
+# This repository adheres to the publiccode.yml standard by including this 
+# metadata file that makes public software easily discoverable.
+# More info at https://github.com/italia/publiccode.yml
+
 publiccodeYmlVersion: '0.2'
 categories:
   - fleet-management
@@ -19,33 +23,24 @@ dependsOn:
       versionMax: ''
       versionMin: '4.0'
 description:
-  en:
-    features:
-      - Aggregates BlaBlaCar
-      - RDEX Standard
-      - Open to new integrations
-    genericName: 'Car Pooling Aggregator'
-    localisedName: CarPoolingHub
-    longDescription: |
-      Aggregates several car pooling providers and presents the results in a
-      aggregated manner. New Car Pooling providers can register to car pooling hub so to present their result in the system.
-      Car Pooling Hub is particurlarly relevant when one user or organization wants to search several car pooling engines or 
-      does not want to tie to a single provider.
-      Car Pooling Hub is a sort of trivago for car pooling provider. The exhange format is RDEX (open standar for car pooling, but also BlaBlaCar API v3 is supported)
-    shortDescription: 'Aggregates several car pooling providers and presents the results in a aggregated manner'
   it:
     features:
       - Aggrega BlaBlaCar
       - Standard RDEX
       - Aperto a nuove integrazioni
-    genericName: 'Car Pooling Aggregator'
+    genericName: Car Pooling Aggregator
     longDescription: |
-      Aggrega i risultati di vari motori di car pooling in un'unica piattaforma. Si tratta di una sorta di trivago del Car Pooling.
-      I fornitori di Car Pooling possono integrarsi nella piattaforma, in modo da presentare i loro risultati ai clienti.
-      Car pooling hub è utile per i privati che vogliono cercare velocemente su più piattaforma, ma anche per le organizzazioni che 
-      non vogliono o non possono scegliere una specifica piattaforma (es: enti pubblici).
-      Car Pooling Hub usa accetta lo standard aperto RDEX e la versione 3.0 delle API di BlaBlaCar.
-    shortDescription: 'Aggrega parecchi motori di car pooling e forniece il risultato in modo aggregato'
+      Aggrega i risultati di vari motori di car pooling in un'unica piattaforma.
+      Si tratta di una sorta di trivago del Car Pooling.
+      I fornitori di Car Pooling possono integrarsi nella piattaforma, in modo
+      da presentare i loro risultati ai clienti.
+      Car pooling hub è utile per i privati che vogliono cercare velocemente su
+      più piattaforma, ma anche per le organizzazioni che non vogliono o non possono scegliere una specifica piattaforma (es: enti
+      pubblici).
+      Car Pooling Hub usa accetta lo standard aperto RDEX e la versione 3.0
+      delle API di BlaBlaCar.
+    shortDescription: |-
+      Aggrega parecchi motori di car pooling e forniece il risultato in modo aggregato
 developmentStatus: stable
 it:
   conforme:
@@ -81,3 +76,4 @@ releaseDate: '2021-07-15'
 softwareType: standalone/web
 softwareVersion: 2.0.2
 url: 'https://github.com/csipiemonte/carpool'
+
