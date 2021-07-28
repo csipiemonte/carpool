@@ -35,9 +35,9 @@ description:
     shortDescription: 'Aggregates several car pooling providers and presents the results in a aggregated manner'
   it:
     features:
-      -Aggrega BlaBlaCar
-      -Standard RDEX
-      -Aperto a nuove integrazioni
+      - Aggrega BlaBlaCar
+      - Standard RDEX
+      - Aperto a nuove integrazioni
     genericName: 'Car Pooling Aggregator'
     longDescription: |
       Aggrega i risultati di vari motori di car pooling in un'unica piattaforma. Si tratta di una sorta di trivago del Car Pooling.
