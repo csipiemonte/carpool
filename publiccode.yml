@@ -31,16 +31,26 @@ description:
     genericName: Car Pooling Aggregator
     longDescription: |
       Aggrega i risultati di vari motori di car pooling in un'unica piattaforma.
+
       Si tratta di una sorta di trivago del Car Pooling.
+
       I fornitori di Car Pooling possono integrarsi nella piattaforma, in modo
+
       da presentare i loro risultati ai clienti.
+
       Car pooling hub è utile per i privati che vogliono cercare velocemente su
-      più piattaforma, ma anche per le organizzazioni che non vogliono o non possono scegliere una specifica piattaforma (es: enti
+
+      più piattaforma, ma anche per le organizzazioni che non vogliono o non
+      possono scegliere una specifica piattaforma (es: enti
+
       pubblici).
+
       Car Pooling Hub usa accetta lo standard aperto RDEX e la versione 3.0
+
       delle API di BlaBlaCar.
     shortDescription: |-
-      Aggrega parecchi motori di car pooling e forniece il risultato in modo aggregato
+      Aggrega parecchi motori di car pooling e forniece il risultato in modo
+      aggregato
 developmentStatus: stable
 it:
   conforme:
@@ -57,7 +67,10 @@ it:
   riuso:
     codiceIPA: csi_piem
 legal:
+  authorsFile: 'https://raw.githubusercontent.com/csipiemonte/carpool/master/COPYRIGHT.txt'
   license: EUPL-1.2
+  mainCopyrightOwner: CSI Piemonte
+  repoOwner: CSI Piemonte
 localisation:
   availableLanguages:
     - it
@@ -76,4 +89,3 @@ releaseDate: '2021-07-15'
 softwareType: standalone/web
 softwareVersion: 2.0.2
 url: 'https://github.com/csipiemonte/carpool'
-
