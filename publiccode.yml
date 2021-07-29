@@ -32,22 +32,11 @@ description:
     longDescription: |
       Aggrega i risultati di vari motori di car pooling in un'unica piattaforma.
 
-      Si tratta di una sorta di trivago del Car Pooling.
+      Si tratta di una sorta di trivago del Car Pooling. I fornitori di Car Pooling possono integrarsi nella piattaforma, in modo da presentare i loro risultati ai clienti.
 
-      I fornitori di Car Pooling possono integrarsi nella piattaforma, in modo
+      Car pooling hub è utile per i privati che vogliono cercare velocemente su più piattaforme, ma anche per le organizzazioni che non vogliono o non possono scegliere una specifica piattaforma (es: enti pubblici).
 
-      da presentare i loro risultati ai clienti.
-
-      Car pooling hub è utile per i privati che vogliono cercare velocemente su
-
-      più piattaforma, ma anche per le organizzazioni che non vogliono o non
-      possono scegliere una specifica piattaforma (es: enti
-
-      pubblici).
-
-      Car Pooling Hub usa accetta lo standard aperto RDEX e la versione 3.0
-
-      delle API di BlaBlaCar.
+      Car Pooling Hub usa accetta lo standard aperto RDEX e la versione 3.0 delle API di BlaBlaCar.
     shortDescription: |-
       Aggrega parecchi motori di car pooling e forniece il risultato in modo
       aggregato
